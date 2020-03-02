@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace SweepstakesManager
 {
-    class Sweepstakes
+    class Sweepstake
     {
         Dictionary<int, Contestant> contestants = new Dictionary<int, Contestant>();
         int numberOfContestants;
         string name;
         public string Name { get => name; }
 
-        public Sweepstakes(string name, int numberOfContestants)
+        public Sweepstake(string name, int numberOfContestants)
         {
             this.name = name;
             this.numberOfContestants = numberOfContestants;
@@ -61,7 +61,6 @@ namespace SweepstakesManager
             contestants.TryGetValue(winnerId, out winner);
             return winner;
         }
-
         public void PrintContestantInfo(Contestant contestant)
         {
             Console.WriteLine("  Contestant name: " + contestant.FirstName + " " + contestant.LastName + "\n" +

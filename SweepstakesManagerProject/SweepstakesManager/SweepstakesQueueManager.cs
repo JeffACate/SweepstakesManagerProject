@@ -8,9 +8,9 @@ namespace SweepstakesManager
 {
     class SweepstakesQueueManager : ISweepstakesManager
     {
-        private Queue<Sweepstakes> queue;
+        private Queue<Sweepstake> queue;
         
-        public void InsertSweepstakes(Sweepstakes sweepstakes){ }
-        public Sweepstakes GetSweepstakes() { throw new NotImplementedException(); }
+        public void InsertSweepstakes(Sweepstake sweepstakes){ }
+        public Sweepstake GetSweepstakes() { throw new NotImplementedException(); }
     }
 }
