@@ -10,7 +10,7 @@ namespace SweepstakesManager
     {
         private Queue<Sweepstake> queue;
         
-        public void InsertSweepstakes(Sweepstake sweepstakes){ }
-        public Sweepstake GetSweepstakes() { throw new NotImplementedException(); }
+        public void InsertSweepstake(Sweepstake sweepstake){ queue.Enqueue(sweepstake); }
+        public Sweepstake GetSweepstake() { return queue.Dequeue(); }
     }
 }
