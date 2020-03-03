@@ -15,7 +15,19 @@ namespace SweepstakesManager
         }
         public void CreateMarketingFirmWithManager()
         {
-
+            string manager = UserInterface.PickManager();
+           
+            switch (manager)
+            { 
+                case "FIFO":
+                case "FOFI":
+                    SweepstakesQueueManager queueManager = new SweepstakesQueueManager();
+                    break;
+                case "LILO":
+                case "LOLI":
+                    SweepstakesStackManager stackManager = new SweepstakesStackManager();
+                    break;
+            }
         }
     }
 }

@@ -19,11 +19,10 @@ namespace SweepstakesManager
             Console.Write(prompt);
             return Console.ReadLine();
         }
-
-
-
-
-
+        public static string PickManager()
+        {
+            
+        }
 
         //private static string ValidateInput(string prompt, int response) 
         //{
