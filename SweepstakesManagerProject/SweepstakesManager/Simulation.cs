@@ -8,10 +8,11 @@ namespace SweepstakesManager
 {
     class Simulation
     {
-
+        MarketingFirm marketingFirm;
         public void Run()
         {
             CreateMarketingFirmWithManager();
+            marketingFirm.CreateSweepstakes();
         }
         public void CreateMarketingFirmWithManager()
         {
@@ -21,11 +22,11 @@ namespace SweepstakesManager
             { 
                 case "FIFO":
                 case "FOFI":
-                    SweepstakesQueueManager queueManager = new SweepstakesQueueManager();
+                     marketingFirm = new MarketingFirm(new SweepstakesQueueManager());
                     break;
                 case "LILO":
                 case "LOLI":
-                    SweepstakesStackManager stackManager = new SweepstakesStackManager();
+                    marketingFirm = new MarketingFirm(new SweepstakesStackManager());
                     break;
             }
         }

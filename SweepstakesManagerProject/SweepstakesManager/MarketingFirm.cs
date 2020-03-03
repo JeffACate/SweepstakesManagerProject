@@ -15,7 +15,9 @@ namespace SweepstakesManager
         }
         public void CreateSweepstakes()
         {
-            
+            string sweepstakesName = UserInterface.NameSweepstake();
+            int numberOfContestants = UserInterface.GetNumberOfContestants(sweepstakesName);
+            _manager.InsertSweepstake(new Sweepstake(sweepstakesName, numberOfContestants));
         }
     }
 }
